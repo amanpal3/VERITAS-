@@ -1,40 +1,40 @@
-# VERITAS Cloud Deployment & Production Guide
+# VERITAS — Cloud Deployment Guide (Render)
 
-This guide provides complete instructions for deploying the VERITAS platform to production using **Render** and configuring monitoring, database connections, and environment variables.
+> **Production Engineering** // Infrastructure-as-Code blueprint, cloud services architecture, environment variables, and pre-flight verification checklist.
 
 ---
 
-## 1. Deployment Architecture on Render
+## 1. Cloud Deployment Architecture
 
-```
+```text
                              [Judges / Users Browser]
-                                        |
-                 +----------------------+----------------------+
-                 |                                             |
-                 v                                             v
+                                        │
+                 ┌──────────────────────┴──────────────────────┐
+                 │                                             │
+                 ▼                                             ▼
      [Render Static Site]                             [Render Web Service]
        veritas-frontend                                 veritas-backend
     (React / Vite Production)                       (FastAPI / Uvicorn API)
-                 |                                             |
-                 | API Calls (/api/v1/*)                       |
-                 +--------------------------------------------->
-                                                               |
-                                            +------------------+------------------+
-                                            |                                     |
-                                            v                                     v
+                 │                                             │
+                 │ API Calls (/api/v1/*)                       │
+                 └─────────────────────────────────────────────►
+                                                               │
+                                            ┌──────────────────┴──────────────────┐
+                                            │                                     │
+                                            ▼                                     ▼
                                    [Neo4j AuraDB Cloud]                  [In-Memory NetworkX]
                                   (Primary Managed Graph)               (Fail-Safe Demo Graph)
 ```
 
 ---
 
-## 2. Blueprint Configuration: `render.yaml`
+## 2. Infrastructure-as-Code: `render.yaml`
 
-The project root contains `render.yaml` which automatically declares both services for Render's Infrastructure-as-Code blueprint engine:
+The project root includes `render.yaml` for 1-click declarative provisioning on Render:
 
 ```yaml
 services:
-  # Backend API Service
+  # Backend Web Service
   - type: web
     name: veritas-backend
     env: python
@@ -78,15 +78,15 @@ services:
 
 ## 3. Environment Variables Reference
 
-| Variable Name | Service | Required? | Default / Example | Purpose |
+| Variable Name | Target Service | Required? | Example Value | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `NEO4J_URI` | Backend | Optional | `neo4j+s://xxxx.databases.neo4j.io` | Connection URI for Neo4j AuraDB instance |
+| `NEO4J_URI` | Backend | Optional | `neo4j+s://xxxx.databases.neo4j.io` | Connection URI for Neo4j AuraDB cloud database |
 | `NEO4J_USER` | Backend | Optional | `neo4j` | Database username |
 | `NEO4J_PASSWORD`| Backend | Optional | `SecurePassword123` | Database access password |
 | `USE_IN_MEMORY_FALLBACK` | Backend | Yes | `true` | Allows instant fallback to NetworkX if Neo4j is offline |
 | `CORS_ORIGINS` | Backend | Yes | `["https://veritas-frontend.onrender.com"]` | Authorized origin whitelist for cross-origin requests |
 | `SENTRY_DSN` | Backend | Optional | `https://xxxx@sentry.io/yyyy` | Sentry DSN for live crash reporting & performance |
-| `ENVIRONMENT` | Backend | Yes | `production` | Environment indicator |
+| `ENVIRONMENT` | Backend | Yes | `production` | Runtime mode (`development` or `production`) |
 | `VITE_API_BASE_URL` | Frontend | Yes | `https://veritas-backend.onrender.com/api/v1` | Backend API base path queried by Cytoscape & Axios |
 
 ---
@@ -97,7 +97,7 @@ services:
 2. Create an **AuraDB Free** instance.
 3. Download the credentials file containing the **Connection URI**, **Username** (`neo4j`), and **Generated Password**.
 4. In Render Dashboard $\to$ `veritas-backend` $\to$ Environment, add `NEO4J_URI`, `NEO4J_USER`, and `NEO4J_PASSWORD`.
-5. Run the loader script to seed demo records into AuraDB:
+5. Seed demo records into AuraDB:
    ```bash
    python scripts/load_neo4j.py
    ```
@@ -107,10 +107,8 @@ services:
 ## 5. Sentry Production Error Tracking
 
 VERITAS integrates **Sentry** for production monitoring to ensure any unexpected runtime exception during judging is logged with complete stack traces.
-
-- **Backend Integration**: In `backend/app/main.py`, Sentry initializes automatically if `SENTRY_DSN` is present.
-- **Fail-Safe Logging**: If `SENTRY_DSN` is not provided, the system gracefully continues logging to stdout without throwing errors.
-- **Alerts**: Critical endpoint failures trigger immediate notifications so issues can be remediated before the live demo.
+- Backend initializes automatically if `SENTRY_DSN` is set.
+- Gracefully degrades to stdout logging if omitted.
 
 ---
 
