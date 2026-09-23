@@ -112,6 +112,7 @@ VERITAS/
 │   └── demo/               # Stable judging dataset (FIRs, CDRs, Transactions, Graph JSON)
 │
 ├── docs/                   # Complete Technical Documentation
+│   ├── OVERVIEW_VERITAS.md # Master team onboarding & quickstart overview
 │   ├── PRD.md              # Product Requirements Document
 │   ├── ARCHITECTURE.md     # Architecture specifications
 │   ├── Blueprint.md        # Technical component blueprint
