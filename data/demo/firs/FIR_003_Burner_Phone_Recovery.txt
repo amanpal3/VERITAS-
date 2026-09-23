@@ -1,0 +1,14 @@
+INTELLIGENCE BRIEF / SURVEILLANCE REPORT: INT-DEL-2026-409
+AGENCY: CRIME INTELLIGENCE BRANCH
+SUBJECT: CELLULAR BURST ANOMALY & BURNER PHONE NETWORK
+DATE: 04-MAR-2026
+
+OPERATIONAL SUMMARY:
+Electronic signals intelligence intercepted a cluster of newly activated SIM cards operating in cell towers around Connaught Place and Aerocity. The devices operate exclusively between 23:00 and 03:00 hrs with zero daytime activity. 
+
+Device MSISDN +919811010004 was identified as being operated by KABIR MIRZA (alias "Ghost", Age 34, wanted in extortion case FIR 44/2024). Signal triangulation shows device +919811010004 established multiple short-duration calls (average 35 seconds) with logistics coordinator RAJESH KUMAR (+919811010003) and an unlisted secure terminal (+919811010001) registered to a corporate address in Vasant Vihar belonging to VIKRAMADITYA SINGHANIA.
+
+Vehicle surveillance observed Kabir Mirza driving a black Mahindra Scorpio (Registration: DL-4C-9901) registered to RAJESH KUMAR.
+
+AUTHOR:
+SPECIAL INTELLIGENCE ANALYST - SQUAD 4

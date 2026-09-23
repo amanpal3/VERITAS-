@@ -1,0 +1,540 @@
+VERITAS
+AI-Powered Criminal Network Analysis System
+KAYA Hackathon — Problem, Solution, Features and Implementation Analysis
+
+============================================================
+1. PROJECT OVERVIEW
+============================================================
+
+Project Name: VERITAS
+
+Purpose:
+VERITAS is an AI-powered criminal and intelligence network analysis platform designed to help investigators transform fragmented structured and unstructured records into an explainable relationship graph.
+
+The system focuses on finding relationships among entities such as:
+- People / suspects / associates
+- Phone numbers
+- Organizations
+- Vehicles
+- Locations
+- Financial accounts
+- Events
+
+VERITAS does not treat an AI-generated signal as proof of criminal activity. It surfaces connections, network characteristics, anomalies and supporting source records for investigator review.
+
+Core idea:
+Raw Records -> Entity & Relation Extraction -> Entity Resolution -> Knowledge Graph -> Graph Analytics -> Explainable Insights -> Investigator Dashboard
+
+============================================================
+2. PROBLEM ANALYSIS
+============================================================
+
+2.1 Fragmented Data
+
+Investigative information can exist across FIRs/police reports, CDRs, financial transaction records, surveillance reports, criminal-history databases and intelligence reports. A relationship that is invisible inside one dataset may become important when several datasets are combined.
+
+Problem:
+Investigators must manually move between disconnected records and systems.
+
+VERITAS response:
+Create a common entity-and-relationship representation so information from multiple sources can be analyzed together.
+
+------------------------------------------------------------
+2.2 Large Amount of Unstructured Text
+------------------------------------------------------------
+
+Police reports and intelligence documents contain valuable information in natural language. Manually reading every document is slow and relationships may be missed.
+
+Problem:
+Important entities and relationships are hidden inside text.
+
+VERITAS response:
+Use NLP, rules and normalization to extract people, organizations, locations, phone numbers, vehicles and relationships from text.
+
+------------------------------------------------------------
+2.3 Identity Duplication / Entity Resolution
+------------------------------------------------------------
+
+The same real-world entity may appear in different formats, for example different spellings of a name or differently formatted phone numbers.
+
+Problem:
+Without resolution, one person can incorrectly appear as several disconnected nodes.
+
+VERITAS response:
+Normalize values, compare candidate records and merge high-confidence duplicates while retaining provenance.
+
+------------------------------------------------------------
+2.4 Hidden Multi-Hop Relationships
+------------------------------------------------------------
+
+Two people may have no direct relationship but may be connected through phones, accounts, organizations, locations or intermediaries.
+
+Problem:
+Manual tabular analysis makes multi-hop relationships difficult to discover.
+
+VERITAS response:
+Represent data as a graph and provide path-finding queries that show how two selected entities are connected.
+
+------------------------------------------------------------
+2.5 Identifying Structurally Important Entities
+------------------------------------------------------------
+
+A network may contain hundreds of entities. Investigators need ways to prioritize which parts of the graph deserve examination.
+
+Problem:
+Raw connection counts alone do not explain network structure.
+
+VERITAS response:
+Calculate graph metrics such as degree centrality and betweenness centrality, and display them as analytical signals rather than conclusions about guilt or role.
+
+------------------------------------------------------------
+2.6 Detecting Groups / Communities
+------------------------------------------------------------
+
+Closely connected entities may form meaningful groups that are difficult to identify manually.
+
+VERITAS response:
+Use community-detection algorithms to find densely connected graph regions and allow investigators to inspect their members and supporting relationships.
+
+------------------------------------------------------------
+2.7 Suspicious or Unusual Patterns
+------------------------------------------------------------
+
+Unusual transaction amounts, communication frequency or other activity may deserve additional review.
+
+VERITAS response:
+Use explainable rules and, where useful, anomaly-detection methods such as Isolation Forest. A detected anomaly is presented as a review signal, not as proof of wrongdoing.
+
+------------------------------------------------------------
+2.8 Explainability and Evidence
+------------------------------------------------------------
+
+A graph connection without evidence is not sufficient for investigative use.
+
+VERITAS response:
+Every important relationship should preserve provenance such as source type, record ID and other permitted metadata. Clicking an edge in the UI should expose its supporting record(s).
+
+============================================================
+3. PROPOSED SOLUTION
+============================================================
+
+VERITAS combines AI/NLP, graph analytics and an investigator-oriented interface.
+
+End-to-end pipeline:
+
+1. Ingest structured and unstructured records.
+2. Clean and normalize input data.
+3. Extract entities using NLP, regex and domain rules.
+4. Extract relationships between entities.
+5. Resolve duplicate representations of the same entity.
+6. Convert entities into graph nodes and relationships into graph edges.
+7. Analyze the graph using NetworkX and/or Neo4j.
+8. Calculate centrality, communities, paths and graph statistics.
+9. Optionally run anomaly detection on suitable structured features.
+10. Expose results through FastAPI.
+11. Visualize results in a React + Tailwind + Cytoscape.js dashboard.
+12. Preserve evidence/provenance so insights remain explainable.
+13. Deploy the application using Render.
+
+============================================================
+4. MAIN FEATURES
+============================================================
+
+FEATURE 1 — Multi-Source Data Ingestion
+Accept demo data representing FIR/report text, CDR records, transactions and other structured intelligence sources.
+
+FEATURE 2 — Entity Extraction
+Extract PERSON, PHONE, LOCATION, VEHICLE, ORGANIZATION, ACCOUNT and other configured entity types.
+
+FEATURE 3 — Relationship Extraction
+Generate relationships such as CONTACTED, USES_PHONE, ASSOCIATED_WITH, VISITED, OWNS, TRANSFERRED_TO or other dataset-supported relations.
+
+FEATURE 4 — Entity Resolution
+Normalize and deduplicate repeated entities across sources.
+
+FEATURE 5 — Interactive Network Graph
+Use Cytoscape.js to display nodes and edges with zoom, pan, search, filtering and selection.
+
+FEATURE 6 — Entity Details
+Selecting a node shows its type, known relationships, graph metrics and source references.
+
+FEATURE 7 — Evidence View
+Selecting a relationship shows the record(s) supporting that relationship.
+
+FEATURE 8 — Connection / Path Finder
+Select Entity A and Entity B and calculate a path between them. Highlight the returned path in the graph and list supporting relationships.
+
+FEATURE 9 — Centrality Analysis
+Calculate degree and betweenness centrality (and optionally PageRank) to surface structurally notable entities.
+
+FEATURE 10 — Community Detection
+Detect densely connected groups and visually distinguish them for inspection.
+
+FEATURE 11 — Graph Analytics Dashboard
+Display network size, relationship counts, entity-type distribution, communities and selected graph metrics.
+
+FEATURE 12 — Anomaly Detection (Enhancement)
+Use rules or scikit-learn on suitable numeric/activity features to surface unusual patterns for review.
+
+FEATURE 13 — AI Investigator Assistant (Optional Enhancement)
+Allow questions such as "How are Entity A and Entity B connected?" The system first retrieves graph facts/evidence, then an LLM may summarize only the retrieved information in readable form.
+
+FEATURE 14 — Search and Filters
+Filter by entity type, relationship type, community or other permitted fields. Search for known entity IDs/names.
+
+============================================================
+5. TECH STACK
+============================================================
+
+Frontend:
+- React
+- Tailwind CSS
+- Cytoscape.js
+- Recharts (optional charts)
+
+Backend / Graph Intelligence:
+- Python
+- FastAPI
+- Pydantic
+- NetworkX
+- Neo4j
+- Cypher
+
+AI / Data:
+- pandas
+- NumPy
+- spaCy
+- Hugging Face Transformers where useful
+- Regex / rule-based extraction
+- scikit-learn for optional anomaly detection
+
+Development / Deployment:
+- Git
+- GitHub
+- Render
+- Environment variables / .env for local development
+
+============================================================
+6. SYSTEM ARCHITECTURE
+============================================================
+
+DATA SOURCES
+    |
+    v
+INGESTION + PREPROCESSING
+Python / pandas
+    |
+    v
+ENTITY + RELATION EXTRACTION
+spaCy / Transformers / Regex / Rules
+    |
+    v
+ENTITY RESOLUTION
+Normalization + matching
+    |
+    v
+GRAPH CONSTRUCTION
+NetworkX / Neo4j
+    |
+    +--------------------+
+    |                    |
+    v                    v
+GRAPH ANALYTICS       OPTIONAL ANOMALY ANALYSIS
+Centrality            scikit-learn / rules
+Communities
+Path Finding
+    |                    |
+    +---------+----------+
+              |
+              v
+           FASTAPI
+              |
+              v
+REACT + TAILWIND + CYTOSCAPE.JS
+              |
+              v
+     INVESTIGATOR DASHBOARD
+              |
+              v
+            RENDER
+
+============================================================
+7. THREE-MEMBER WORK DIVISION
+============================================================
+
+MEMBER 1 — AI / NLP / DATA
+Responsibilities:
+- Data ingestion
+- Data cleaning
+- NLP entity extraction
+- Relationship extraction
+- Entity normalization
+- Entity resolution
+- Optional anomaly detection
+- Produce standardized entities + relationships
+
+Primary technologies:
+Python, pandas, spaCy, Hugging Face, regex, scikit-learn
+
+Output contract:
+Standardized entity and relationship records with provenance.
+
+------------------------------------------------------------
+MEMBER 2 — GRAPH INTELLIGENCE + BACKEND
+------------------------------------------------------------
+
+Responsibilities:
+- Build NetworkX graph
+- Design Neo4j graph model
+- Write Cypher queries
+- Degree/betweenness centrality
+- Community detection
+- Path finding
+- Graph metrics
+- FastAPI endpoints
+- Pydantic schemas
+- CORS/backend integration
+- Backend Render deployment
+- Preserve evidence in graph/API responses
+
+Primary technologies:
+Python, NetworkX, Neo4j, Cypher, FastAPI, Pydantic, Render
+
+Key API examples:
+GET /api/v1/health
+GET /api/v1/graph
+GET /api/v1/entities
+GET /api/v1/entities/{id}
+GET /api/v1/path?source=P001&target=P017
+GET /api/v1/communities
+GET /api/v1/centrality
+GET /api/v1/analytics
+
+------------------------------------------------------------
+MEMBER 3 — FRONTEND + VISUALIZATION
+------------------------------------------------------------
+
+Responsibilities:
+- React dashboard
+- Tailwind styling
+- Cytoscape.js network visualization
+- Search and filters
+- Node details panel
+- Edge/evidence panel
+- Path highlighting
+- Analytics charts
+- API integration
+- Responsive UI
+- Frontend Render deployment
+
+Primary technologies:
+React, Tailwind CSS, Cytoscape.js, Recharts, REST APIs
+
+============================================================
+8. GRAPH DATA MODEL
+============================================================
+
+Example node types:
+- Person
+- Phone
+- Organization
+- Location
+- Vehicle
+- Account
+- Event
+
+Example edge types:
+- CONTACTED
+- USES_PHONE
+- ASSOCIATED_WITH
+- VISITED
+- OWNS
+- TRANSFERRED_TO
+- PARTICIPATED_IN
+
+Every edge should contain, where available:
+- Relationship type
+- Source record ID
+- Source type
+- Timestamp/date
+- Weight/frequency
+- Confidence where extraction is probabilistic
+
+Example:
+
+Person:P001
+    |
+    | USES_PHONE
+    v
+Phone:PH002
+    |
+    | CONTACTED
+    v
+Phone:PH009
+    |
+    | USED_BY
+    v
+Person:P017
+
+This makes the multi-hop connection explicit and inspectable.
+
+============================================================
+9. HOW VERITAS SOLVES THE PROBLEM
+============================================================
+
+Problem: Data is fragmented.
+Solution: Convert heterogeneous records into a common graph representation.
+
+Problem: Reports are unstructured.
+Solution: NLP extracts entities and relationships.
+
+Problem: Same entity appears differently.
+Solution: Entity resolution normalizes and links duplicates.
+
+Problem: Hidden connections are difficult to see.
+Solution: Graph path finding discovers multi-hop relationships.
+
+Problem: Large networks are difficult to prioritize.
+Solution: Centrality and community metrics surface structurally notable areas for review.
+
+Problem: Unusual behavior may be buried in records.
+Solution: Rules and optional anomaly detection surface review signals.
+
+Problem: Results may be difficult to understand.
+Solution: React + Cytoscape provides an interactive visual investigation interface.
+
+Problem: AI output can be difficult to trust.
+Solution: Preserve provenance and expose supporting records for graph relationships and generated summaries.
+
+============================================================
+10. DEMO FLOW
+============================================================
+
+A strong hackathon demo should tell one continuous investigation story.
+
+STEP 1 — Select/upload demo case data.
+
+STEP 2 — Show processing summary, for example:
+"Records processed -> entities extracted -> relationships generated."
+
+STEP 3 — Open the interactive network graph.
+
+STEP 4 — Search/select an entity and display its immediate relationships.
+
+STEP 5 — Show a structurally notable entity using a graph metric such as betweenness centrality and explain what that metric means.
+
+STEP 6 — Show detected communities.
+
+STEP 7 — Use Find Connection between two entities and highlight the multi-hop path.
+
+STEP 8 — Click an edge and display the source evidence that supports it.
+
+STEP 9 — If implemented, show an unusual-pattern alert and its contributing signals.
+
+STEP 10 — Optional AI assistant: ask for a summary of the selected connection. The response must be grounded in retrieved graph/evidence data.
+
+============================================================
+11. MVP VS BONUS FEATURES
+============================================================
+
+MUST HAVE (P0):
+- Data ingestion
+- Entity extraction
+- Relationship extraction
+- Entity resolution/basic normalization
+- Graph construction
+- Interactive graph
+- Entity search/filter
+- Path finding
+- Centrality
+- Evidence/provenance
+- FastAPI integration
+- React dashboard
+- Render deployment
+
+IMPORTANT (P1):
+- Neo4j + Cypher
+- Community detection
+- Analytics dashboard
+- Better entity resolution
+- Edge/node detail panels
+
+BONUS (P2):
+- Isolation Forest anomaly detection
+- Graph-grounded LLM assistant
+- Geographic map
+- Timeline analysis
+- Neo4j Graph Data Science algorithms
+- Advanced graph filtering
+
+============================================================
+12. KEY TECHNICAL RISKS AND SOLUTIONS
+============================================================
+
+Risk 1: NLP extracts incorrect entities.
+Mitigation: Combine models with regex/domain rules, confidence values and manual verification in the demo dataset.
+
+Risk 2: Duplicate entities fragment the graph.
+Mitigation: Normalize names/phones/IDs and implement entity resolution before graph creation.
+
+Risk 3: Graph becomes visually unreadable.
+Mitigation: Filters, search, neighborhood expansion, community grouping and path highlighting.
+
+Risk 4: Frontend waits for backend.
+Mitigation: Freeze API_CONTRACT.md early and give Member 3 mock JSON responses.
+
+Risk 5: Backend waits for AI pipeline.
+Mitigation: Give Member 2 a fixed demo entities/relationships JSON file from day one.
+
+Risk 6: AI generates unsupported conclusions.
+Mitigation: Retrieve graph facts first, restrict generated summaries to retrieved evidence, and show source records.
+
+Risk 7: Deployment fails close to judging.
+Mitigation: Deploy a minimal React -> FastAPI -> graph flow on Render early, then add features incrementally.
+
+============================================================
+13. SUCCESS CRITERIA
+============================================================
+
+The MVP is successful when an investigator can:
+
+1. Load/select a case dataset.
+2. See extracted entities and relationships.
+3. Explore an interactive graph.
+4. Search for an entity.
+5. Inspect its relationships.
+6. Find a multi-hop connection between two entities.
+7. View centrality/community analysis.
+8. Inspect evidence supporting important graph edges.
+9. Receive analytical signals without the system presenting them as proof of guilt.
+10. Use the deployed application through a stable Render URL.
+
+============================================================
+14. FINAL POSITIONING
+============================================================
+
+VERITAS is not simply a graph viewer and not simply an NLP model.
+
+Its value comes from combining:
+
+MULTI-SOURCE DATA
+        +
+AI/NLP EXTRACTION
+        +
+ENTITY RESOLUTION
+        +
+KNOWLEDGE GRAPH
+        +
+GRAPH INTELLIGENCE
+        +
+EXPLAINABLE EVIDENCE
+        +
+INTERACTIVE INVESTIGATION UI
+
+Final project statement:
+
+"VERITAS transforms fragmented structured and unstructured intelligence records into an explainable relationship graph, enabling investigators to discover hidden connections, inspect network structure, identify unusual patterns and trace every important relationship back to supporting evidence."
+
+============================================================
+END OF DOCUMENT
+============================================================

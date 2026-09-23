@@ -1,0 +1,1009 @@
+{
+  "metadata": {
+    "title": "Operation Shadow Syndicate - Demo Dataset",
+    "generated_at": "2026-09-23T18:58:56.809553+00:00",
+    "total_nodes": 29,
+    "total_edges": 33,
+    "communities_detected": 3,
+    "key_mastermind": "P001 (Vikramaditya Singhania)",
+    "key_broker": "P002 (Tariq Sheikh)"
+  },
+  "nodes": [
+    {
+      "data": {
+        "id": "P001",
+        "label": "Vikramaditya Singhania",
+        "type": "Person",
+        "role": "Syndicate Mastermind",
+        "risk_score": 96,
+        "aliases": [
+          "Vikram",
+          "The Don"
+        ],
+        "degree": 9,
+        "betweenness": 0.48,
+        "pagerank": 0.165,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "P002",
+        "label": "Tariq Sheikh",
+        "type": "Person",
+        "role": "Hawala Broker",
+        "risk_score": 88,
+        "aliases": [
+          "The Broker",
+          "Sheikh Ji"
+        ],
+        "degree": 12,
+        "betweenness": 0.62,
+        "pagerank": 0.142,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "P003",
+        "label": "Rajesh Kumar",
+        "type": "Person",
+        "role": "Logistics Coordinator",
+        "risk_score": 82,
+        "aliases": [
+          "Raju Swift"
+        ],
+        "degree": 11,
+        "betweenness": 0.44,
+        "pagerank": 0.125,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "P004",
+        "label": "Kabir Mirza",
+        "type": "Person",
+        "role": "Enforcer & Security",
+        "risk_score": 89,
+        "aliases": [
+          "Ghost"
+        ],
+        "degree": 7,
+        "betweenness": 0.28,
+        "pagerank": 0.088,
+        "community_id": 3
+      }
+    },
+    {
+      "data": {
+        "id": "P005",
+        "label": "Anita Roy",
+        "type": "Person",
+        "role": "Shell Company Director",
+        "risk_score": 78,
+        "aliases": [
+          "Director Roy"
+        ],
+        "degree": 8,
+        "betweenness": 0.35,
+        "pagerank": 0.095,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "P006",
+        "label": "Arjun Verma",
+        "type": "Person",
+        "role": "Transport Courier",
+        "risk_score": 74,
+        "aliases": [
+          "Ramesh S/o"
+        ],
+        "degree": 5,
+        "betweenness": 0.12,
+        "pagerank": 0.052,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "P007",
+        "label": "Sameer Khan",
+        "type": "Person",
+        "role": "Urban Dispatcher",
+        "risk_score": 68,
+        "aliases": [
+          "Sam"
+        ],
+        "degree": 4,
+        "betweenness": 0.09,
+        "pagerank": 0.045,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "P008",
+        "label": "Deepak Sharma",
+        "type": "Person",
+        "role": "Heavy Fleet Driver",
+        "risk_score": 62,
+        "aliases": [
+          "Deepu"
+        ],
+        "degree": 3,
+        "betweenness": 0.06,
+        "pagerank": 0.038,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "P009",
+        "label": "Imran Qureshi",
+        "type": "Person",
+        "role": "Safehouse Guard",
+        "risk_score": 65,
+        "aliases": [
+          "Imran Bhai"
+        ],
+        "degree": 3,
+        "betweenness": 0.05,
+        "pagerank": 0.036,
+        "community_id": 3
+      }
+    },
+    {
+      "data": {
+        "id": "P010",
+        "label": "Farhan Ali",
+        "type": "Person",
+        "role": "Forex Runner",
+        "risk_score": 71,
+        "aliases": [
+          "Cashier"
+        ],
+        "degree": 4,
+        "betweenness": 0.08,
+        "pagerank": 0.042,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "PH001",
+        "label": "+919811010001",
+        "type": "Phone",
+        "role": "Encrypted Terminal",
+        "risk_score": 90,
+        "aliases": [
+          "Secure Line 1"
+        ],
+        "degree": 5,
+        "betweenness": 0.22,
+        "pagerank": 0.065,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "PH002",
+        "label": "+919811010002",
+        "type": "Phone",
+        "role": "Broker Primary Line",
+        "risk_score": 85,
+        "aliases": [
+          "Old Delhi Line"
+        ],
+        "degree": 7,
+        "betweenness": 0.38,
+        "pagerank": 0.082,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "PH003",
+        "label": "+919811010003",
+        "type": "Phone",
+        "role": "Logistics Dispatch Line",
+        "risk_score": 80,
+        "aliases": [
+          "Okhla Line"
+        ],
+        "degree": 8,
+        "betweenness": 0.34,
+        "pagerank": 0.078,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "PH004",
+        "label": "+919811010004",
+        "type": "Phone",
+        "role": "Burner Device Cluster",
+        "risk_score": 92,
+        "aliases": [
+          "Burner Alpha"
+        ],
+        "degree": 5,
+        "betweenness": 0.25,
+        "pagerank": 0.061,
+        "community_id": 3
+      }
+    },
+    {
+      "data": {
+        "id": "PH005",
+        "label": "+919811010005",
+        "type": "Phone",
+        "role": "Corporate Office Line",
+        "risk_score": 72,
+        "aliases": [
+          "Astra HQ Line"
+        ],
+        "degree": 4,
+        "betweenness": 0.18,
+        "pagerank": 0.051,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "PH006",
+        "label": "+919811010006",
+        "type": "Phone",
+        "role": "Seized Courier Phone",
+        "risk_score": 84,
+        "aliases": [
+          "Border Intercept"
+        ],
+        "degree": 3,
+        "betweenness": 0.09,
+        "pagerank": 0.039,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "V001",
+        "label": "DL-1C-0001 (BMW 7-Series)",
+        "type": "Vehicle",
+        "role": "Executive Vehicle",
+        "risk_score": 75,
+        "aliases": [
+          "Black Luxury Sedan"
+        ],
+        "degree": 2,
+        "betweenness": 0.04,
+        "pagerank": 0.028,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "V002",
+        "label": "DL-3C-1234 (Swift Dzire)",
+        "type": "Vehicle",
+        "role": "Logistics Car",
+        "risk_score": 70,
+        "aliases": [
+          "Silver Sedan"
+        ],
+        "degree": 2,
+        "betweenness": 0.05,
+        "pagerank": 0.029,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "V003",
+        "label": "DL-4C-9901 (Mahindra Scorpio)",
+        "type": "Vehicle",
+        "role": "Enforcement SUV",
+        "risk_score": 86,
+        "aliases": [
+          "Black Scorpio"
+        ],
+        "degree": 2,
+        "betweenness": 0.08,
+        "pagerank": 0.035,
+        "community_id": 3
+      }
+    },
+    {
+      "data": {
+        "id": "V004",
+        "label": "DL-1M-4412 (Transport Truck)",
+        "type": "Vehicle",
+        "role": "Smuggling Carrier",
+        "risk_score": 94,
+        "aliases": [
+          "Intercepted Truck"
+        ],
+        "degree": 2,
+        "betweenness": 0.06,
+        "pagerank": 0.032,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "ORG001",
+        "label": "Astra Logistics Ltd",
+        "type": "Organization",
+        "role": "Corporate Shell",
+        "risk_score": 88,
+        "aliases": [
+          "Astra Exports"
+        ],
+        "degree": 6,
+        "betweenness": 0.36,
+        "pagerank": 0.089,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "ORG002",
+        "label": "Sheikh Trading Enterprises",
+        "type": "Organization",
+        "role": "Hawala Counter",
+        "risk_score": 84,
+        "aliases": [
+          "Sheikh Forex"
+        ],
+        "degree": 5,
+        "betweenness": 0.31,
+        "pagerank": 0.075,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "ORG003",
+        "label": "Trident Holdings Ltd (Offshore)",
+        "type": "Organization",
+        "role": "Offshore Conduit",
+        "risk_score": 91,
+        "aliases": [
+          "Trident Dubai"
+        ],
+        "degree": 3,
+        "betweenness": 0.15,
+        "pagerank": 0.048,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "LOC001",
+        "label": "Okhla Industrial Area (Godown 44B)",
+        "type": "Location",
+        "role": "Distribution Hub",
+        "risk_score": 85,
+        "aliases": [
+          "Central Depot"
+        ],
+        "degree": 5,
+        "betweenness": 0.28,
+        "pagerank": 0.068,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "LOC002",
+        "label": "Chandni Chowk Counter",
+        "type": "Location",
+        "role": "Hawala Vault",
+        "risk_score": 82,
+        "aliases": [
+          "Old Delhi Vault"
+        ],
+        "degree": 4,
+        "betweenness": 0.22,
+        "pagerank": 0.058,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "LOC003",
+        "label": "Vasant Vihar Residence",
+        "type": "Location",
+        "role": "Command Safehouse",
+        "risk_score": 79,
+        "aliases": [
+          "South Delhi Base"
+        ],
+        "degree": 3,
+        "betweenness": 0.14,
+        "pagerank": 0.044,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "BA001",
+        "label": "ACC-SINGH-9901",
+        "type": "BankAccount",
+        "role": "Master Beneficiary Account",
+        "risk_score": 93,
+        "aliases": [
+          "Singhania Private Wealth"
+        ],
+        "degree": 4,
+        "betweenness": 0.25,
+        "pagerank": 0.062,
+        "community_id": 1
+      }
+    },
+    {
+      "data": {
+        "id": "BA002",
+        "label": "ACC-ASTRA-7701",
+        "type": "BankAccount",
+        "role": "Layering Hub Account",
+        "risk_score": 89,
+        "aliases": [
+          "Astra Corporate Operating"
+        ],
+        "degree": 7,
+        "betweenness": 0.42,
+        "pagerank": 0.086,
+        "community_id": 2
+      }
+    },
+    {
+      "data": {
+        "id": "BA003",
+        "label": "ACC-SHEIKH-4401",
+        "type": "BankAccount",
+        "role": "Hawala Settlement Account",
+        "risk_score": 86,
+        "aliases": [
+          "Sheikh Trade Ledger"
+        ],
+        "degree": 5,
+        "betweenness": 0.32,
+        "pagerank": 0.071,
+        "community_id": 2
+      }
+    }
+  ],
+  "edges": [
+    {
+      "data": {
+        "id": "R001",
+        "source": "P001",
+        "target": "PH001",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "INT-DEL-2026-409",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Phone registered to Vasant Vihar residence.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R002",
+        "source": "P002",
+        "target": "PH002",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-188/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Device recovered from Tariq Sheikh during raid.",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R003",
+        "source": "P003",
+        "target": "PH003",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-104/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Driver Verma confirmed dispatch coordination with this MSISDN.",
+          "confidence": 0.94
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R004",
+        "source": "P004",
+        "target": "PH004",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "INT-DEL-2026-409",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Signals intelligence linked burner cluster to Kabir Mirza.",
+          "confidence": 0.91
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R005",
+        "source": "P005",
+        "target": "PH005",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Corporate listing on Astra Logistics MCA filing.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R006",
+        "source": "P006",
+        "target": "PH006",
+        "type": "USES_PHONE",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-104/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Recovered from driver Arjun Verma during Singhu border seizure.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R007",
+        "source": "PH001",
+        "target": "PH002",
+        "type": "CALLED",
+        "weight": 5.0,
+        "timestamp": "2026-03-11T20:15:00Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "5 calls totaling 1667 seconds between Vikram Singhania and Tariq Sheikh.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R008",
+        "source": "PH001",
+        "target": "PH005",
+        "type": "CALLED",
+        "weight": 4.0,
+        "timestamp": "2026-03-12T12:45:30Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "4 calls totaling 1200 seconds between Vikram Singhania and Anita Roy.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R009",
+        "source": "PH001",
+        "target": "PH004",
+        "type": "CALLED",
+        "weight": 2.0,
+        "timestamp": "2026-03-10T02:15:10Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "2 late night encrypted calls with burner device.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R010",
+        "source": "PH002",
+        "target": "PH005",
+        "type": "CALLED",
+        "weight": 3.0,
+        "timestamp": "2026-03-10T19:25:00Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "3 calls coordinating Hawala settlements.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R011",
+        "source": "PH004",
+        "target": "PH003",
+        "type": "CALLED",
+        "weight": 4.0,
+        "timestamp": "2026-03-10T00:45:00Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "4 calls directing logistics dispatches.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R012",
+        "source": "PH003",
+        "target": "PH006",
+        "type": "CALLED",
+        "weight": 4.0,
+        "timestamp": "2026-02-12T22:30:10Z",
+        "provenance": {
+          "source_id": "CDR-LOG-2026",
+          "source_type": "TELECOM_CDR",
+          "snippet": "4 calls preceding Singhu border checkpoint intercept.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R013",
+        "source": "P001",
+        "target": "V001",
+        "type": "OWNS",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Observed arriving at Okhla warehouse.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R014",
+        "source": "P003",
+        "target": "V002",
+        "type": "OWNS",
+        "weight": 1.0,
+        "timestamp": "2026-03-01T00:00:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Rajesh Kumar unloads cargo from Swift Dzire.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R015",
+        "source": "P004",
+        "target": "V003",
+        "type": "OPERATES",
+        "weight": 1.0,
+        "timestamp": "2026-03-04T00:00:00Z",
+        "provenance": {
+          "source_id": "INT-DEL-2026-409",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Kabir Mirza observed driving black Scorpio.",
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R016",
+        "source": "P006",
+        "target": "V004",
+        "type": "OPERATES",
+        "weight": 1.0,
+        "timestamp": "2026-02-12T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-104/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Arjun Verma intercepted driving commercial truck.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R017",
+        "source": "P001",
+        "target": "ORG001",
+        "type": "CONTROLS",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Ultimate beneficial owner through offshore vehicle.",
+          "confidence": 0.94
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R018",
+        "source": "P005",
+        "target": "ORG001",
+        "type": "MEMBER_OF",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Managing Director holding 70% registered equity.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R019",
+        "source": "P002",
+        "target": "ORG002",
+        "type": "CONTROLS",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-188/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Sole proprietor of unlicenced currency counter.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R020",
+        "source": "P001",
+        "target": "ORG003",
+        "type": "CONTROLS",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Beneficial ownership revealed in offshore tax filings.",
+          "confidence": 0.9
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R021",
+        "source": "P001",
+        "target": "BA001",
+        "type": "OWNS_ACCOUNT",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Private wealth management account.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R022",
+        "source": "ORG001",
+        "target": "BA002",
+        "type": "OWNS_ACCOUNT",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIN-EOW-2026-092",
+          "source_type": "AUDIT",
+          "snippet": "Primary corporate operating account.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R023",
+        "source": "ORG002",
+        "target": "BA003",
+        "type": "OWNS_ACCOUNT",
+        "weight": 1.0,
+        "timestamp": "2026-02-01T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-188/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Seized ledger bank account.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R024",
+        "source": "BA002",
+        "target": "BA003",
+        "type": "TRANSACTED_WITH",
+        "weight": 3000000.0,
+        "timestamp": "2026-03-06T10:15:00Z",
+        "provenance": {
+          "source_id": "BANK-TX-2026",
+          "source_type": "BANK_LEDGER",
+          "snippet": "Multiple wire tranches aggregating INR 30 Lakhs.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R025",
+        "source": "BA003",
+        "target": "BA001",
+        "type": "TRANSACTED_WITH",
+        "weight": 3700000.0,
+        "timestamp": "2026-03-08T14:20:00Z",
+        "provenance": {
+          "source_id": "BANK-TX-2026",
+          "source_type": "BANK_LEDGER",
+          "snippet": "Consulting and dividend disbursements to Vikram Singhania.",
+          "confidence": 1.0
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R026",
+        "source": "P001",
+        "target": "P002",
+        "type": "ASSOCIATED_WITH",
+        "weight": 0.95,
+        "timestamp": "2026-03-12T01:10:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Direct closed-door meeting at Okhla warehouse.",
+          "confidence": 0.96
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R027",
+        "source": "P001",
+        "target": "P005",
+        "type": "ASSOCIATED_WITH",
+        "weight": 0.9,
+        "timestamp": "2026-03-11T23:40:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Joint arrival at Okhla warehouse mezzanine.",
+          "confidence": 0.95
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R028",
+        "source": "P003",
+        "target": "P006",
+        "type": "SUPERVISES",
+        "weight": 0.88,
+        "timestamp": "2026-02-12T00:00:00Z",
+        "provenance": {
+          "source_id": "FIR-104/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Verma confirmed Rajesh Kumar as immediate handler.",
+          "confidence": 0.98
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R029",
+        "source": "P003",
+        "target": "P007",
+        "type": "SUPERVISES",
+        "weight": 0.8,
+        "timestamp": "2026-03-12T02:00:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Dispatched Sameer Khan on parcel courier run.",
+          "confidence": 0.92
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R030",
+        "source": "P004",
+        "target": "P003",
+        "type": "COORDINATES_WITH",
+        "weight": 0.85,
+        "timestamp": "2026-03-03T01:30:00Z",
+        "provenance": {
+          "source_id": "INT-DEL-2026-409",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Frequent coordination over encrypted phone lines.",
+          "confidence": 0.93
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R031",
+        "source": "P003",
+        "target": "LOC001",
+        "type": "LOCATED_AT",
+        "weight": 1.0,
+        "timestamp": "2026-03-10T22:15:00Z",
+        "provenance": {
+          "source_id": "SURV-2026-031",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Present during cargo unloading at Okhla godown.",
+          "confidence": 0.97
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R032",
+        "source": "P002",
+        "target": "LOC002",
+        "type": "LOCATED_AT",
+        "weight": 1.0,
+        "timestamp": "2026-02-24T18:20:00Z",
+        "provenance": {
+          "source_id": "FIR-188/2026",
+          "source_type": "POLICE_REPORT",
+          "snippet": "Apprehended inside Chandni Chowk counter premises.",
+          "confidence": 0.99
+        }
+      }
+    },
+    {
+      "data": {
+        "id": "R033",
+        "source": "P001",
+        "target": "LOC003",
+        "type": "LOCATED_AT",
+        "weight": 1.0,
+        "timestamp": "2026-03-04T00:00:00Z",
+        "provenance": {
+          "source_id": "INT-DEL-2026-409",
+          "source_type": "SURVEILLANCE",
+          "snippet": "Residence and command location.",
+          "confidence": 0.9
+        }
+      }
+    }
+  ]
+}

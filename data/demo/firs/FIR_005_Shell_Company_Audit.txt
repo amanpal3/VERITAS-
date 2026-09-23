@@ -1,0 +1,15 @@
+FORENSIC FINANCIAL AUDIT: FIN-EOW-2026-092
+AGENCY: FINANCIAL INVESTIGATION SQUAD
+SUBJECT: SHELL ENTITY ENTANGLEMENT - ASTRA LOGISTICS LTD
+DATE OF AUDIT: 18-MAR-2026
+
+EXECUTIVE FINDINGS:
+Astra Logistics Ltd (CIN: U63090DL2021PTC389102), with registered office at Barakhamba Road, New Delhi, shows annual declared revenues of INR 12.4 Crores despite having no verifiable freight fleet or commercial warehouse leases in its corporate name.
+
+Key Shareholders & Directorship:
+1. ANITA ROY - Managing Director (Holding 70% equity).
+2. VIKRAMADITYA SINGHANIA - Non-Executive Director & Primary Beneficiary through offshore entity 'Trident Holdings Ltd'.
+
+Banking Footprint:
+- Bank Account ACC-ASTRA-7701 received 42 structured cash deposits of INR 1,95,000 (just below mandatory CTR reporting thresholds) across 15 different retail branches in 21 days.
+- Over 65% of the pooled funds were immediately wired out to account ACC-SINGH-9901 (Vikramaditya Singhania personal wealth account) or liquidated via Tariq Sheikh's trade settlement conduits.

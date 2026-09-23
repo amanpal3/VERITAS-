@@ -1,0 +1,464 @@
+[
+  {
+    "id": "R001",
+    "source": "P001",
+    "target": "PH001",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "INT-DEL-2026-409",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Phone registered to Vasant Vihar residence.",
+      "confidence": 0.95
+    }
+  },
+  {
+    "id": "R002",
+    "source": "P002",
+    "target": "PH002",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-188/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Device recovered from Tariq Sheikh during raid.",
+      "confidence": 0.98
+    }
+  },
+  {
+    "id": "R003",
+    "source": "P003",
+    "target": "PH003",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-104/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Driver Verma confirmed dispatch coordination with this MSISDN.",
+      "confidence": 0.94
+    }
+  },
+  {
+    "id": "R004",
+    "source": "P004",
+    "target": "PH004",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "INT-DEL-2026-409",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Signals intelligence linked burner cluster to Kabir Mirza.",
+      "confidence": 0.91
+    }
+  },
+  {
+    "id": "R005",
+    "source": "P005",
+    "target": "PH005",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Corporate listing on Astra Logistics MCA filing.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R006",
+    "source": "P006",
+    "target": "PH006",
+    "type": "USES_PHONE",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-104/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Recovered from driver Arjun Verma during Singhu border seizure.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R007",
+    "source": "PH001",
+    "target": "PH002",
+    "type": "CALLED",
+    "weight": 5.0,
+    "timestamp": "2026-03-11T20:15:00Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "5 calls totaling 1667 seconds between Vikram Singhania and Tariq Sheikh.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R008",
+    "source": "PH001",
+    "target": "PH005",
+    "type": "CALLED",
+    "weight": 4.0,
+    "timestamp": "2026-03-12T12:45:30Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "4 calls totaling 1200 seconds between Vikram Singhania and Anita Roy.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R009",
+    "source": "PH001",
+    "target": "PH004",
+    "type": "CALLED",
+    "weight": 2.0,
+    "timestamp": "2026-03-10T02:15:10Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "2 late night encrypted calls with burner device.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R010",
+    "source": "PH002",
+    "target": "PH005",
+    "type": "CALLED",
+    "weight": 3.0,
+    "timestamp": "2026-03-10T19:25:00Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "3 calls coordinating Hawala settlements.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R011",
+    "source": "PH004",
+    "target": "PH003",
+    "type": "CALLED",
+    "weight": 4.0,
+    "timestamp": "2026-03-10T00:45:00Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "4 calls directing logistics dispatches.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R012",
+    "source": "PH003",
+    "target": "PH006",
+    "type": "CALLED",
+    "weight": 4.0,
+    "timestamp": "2026-02-12T22:30:10Z",
+    "provenance": {
+      "source_id": "CDR-LOG-2026",
+      "source_type": "TELECOM_CDR",
+      "snippet": "4 calls preceding Singhu border checkpoint intercept.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R013",
+    "source": "P001",
+    "target": "V001",
+    "type": "OWNS",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Observed arriving at Okhla warehouse.",
+      "confidence": 0.95
+    }
+  },
+  {
+    "id": "R014",
+    "source": "P003",
+    "target": "V002",
+    "type": "OWNS",
+    "weight": 1.0,
+    "timestamp": "2026-03-01T00:00:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Rajesh Kumar unloads cargo from Swift Dzire.",
+      "confidence": 0.95
+    }
+  },
+  {
+    "id": "R015",
+    "source": "P004",
+    "target": "V003",
+    "type": "OPERATES",
+    "weight": 1.0,
+    "timestamp": "2026-03-04T00:00:00Z",
+    "provenance": {
+      "source_id": "INT-DEL-2026-409",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Kabir Mirza observed driving black Scorpio.",
+      "confidence": 0.92
+    }
+  },
+  {
+    "id": "R016",
+    "source": "P006",
+    "target": "V004",
+    "type": "OPERATES",
+    "weight": 1.0,
+    "timestamp": "2026-02-12T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-104/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Arjun Verma intercepted driving commercial truck.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R017",
+    "source": "P001",
+    "target": "ORG001",
+    "type": "CONTROLS",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Ultimate beneficial owner through offshore vehicle.",
+      "confidence": 0.94
+    }
+  },
+  {
+    "id": "R018",
+    "source": "P005",
+    "target": "ORG001",
+    "type": "MEMBER_OF",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Managing Director holding 70% registered equity.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R019",
+    "source": "P002",
+    "target": "ORG002",
+    "type": "CONTROLS",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-188/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Sole proprietor of unlicenced currency counter.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R020",
+    "source": "P001",
+    "target": "ORG003",
+    "type": "CONTROLS",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Beneficial ownership revealed in offshore tax filings.",
+      "confidence": 0.9
+    }
+  },
+  {
+    "id": "R021",
+    "source": "P001",
+    "target": "BA001",
+    "type": "OWNS_ACCOUNT",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Private wealth management account.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R022",
+    "source": "ORG001",
+    "target": "BA002",
+    "type": "OWNS_ACCOUNT",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIN-EOW-2026-092",
+      "source_type": "AUDIT",
+      "snippet": "Primary corporate operating account.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R023",
+    "source": "ORG002",
+    "target": "BA003",
+    "type": "OWNS_ACCOUNT",
+    "weight": 1.0,
+    "timestamp": "2026-02-01T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-188/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Seized ledger bank account.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R024",
+    "source": "BA002",
+    "target": "BA003",
+    "type": "TRANSACTED_WITH",
+    "weight": 3000000.0,
+    "timestamp": "2026-03-06T10:15:00Z",
+    "provenance": {
+      "source_id": "BANK-TX-2026",
+      "source_type": "BANK_LEDGER",
+      "snippet": "Multiple wire tranches aggregating INR 30 Lakhs.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R025",
+    "source": "BA003",
+    "target": "BA001",
+    "type": "TRANSACTED_WITH",
+    "weight": 3700000.0,
+    "timestamp": "2026-03-08T14:20:00Z",
+    "provenance": {
+      "source_id": "BANK-TX-2026",
+      "source_type": "BANK_LEDGER",
+      "snippet": "Consulting and dividend disbursements to Vikram Singhania.",
+      "confidence": 1.0
+    }
+  },
+  {
+    "id": "R026",
+    "source": "P001",
+    "target": "P002",
+    "type": "ASSOCIATED_WITH",
+    "weight": 0.95,
+    "timestamp": "2026-03-12T01:10:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Direct closed-door meeting at Okhla warehouse.",
+      "confidence": 0.96
+    }
+  },
+  {
+    "id": "R027",
+    "source": "P001",
+    "target": "P005",
+    "type": "ASSOCIATED_WITH",
+    "weight": 0.9,
+    "timestamp": "2026-03-11T23:40:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Joint arrival at Okhla warehouse mezzanine.",
+      "confidence": 0.95
+    }
+  },
+  {
+    "id": "R028",
+    "source": "P003",
+    "target": "P006",
+    "type": "SUPERVISES",
+    "weight": 0.88,
+    "timestamp": "2026-02-12T00:00:00Z",
+    "provenance": {
+      "source_id": "FIR-104/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Verma confirmed Rajesh Kumar as immediate handler.",
+      "confidence": 0.98
+    }
+  },
+  {
+    "id": "R029",
+    "source": "P003",
+    "target": "P007",
+    "type": "SUPERVISES",
+    "weight": 0.8,
+    "timestamp": "2026-03-12T02:00:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Dispatched Sameer Khan on parcel courier run.",
+      "confidence": 0.92
+    }
+  },
+  {
+    "id": "R030",
+    "source": "P004",
+    "target": "P003",
+    "type": "COORDINATES_WITH",
+    "weight": 0.85,
+    "timestamp": "2026-03-03T01:30:00Z",
+    "provenance": {
+      "source_id": "INT-DEL-2026-409",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Frequent coordination over encrypted phone lines.",
+      "confidence": 0.93
+    }
+  },
+  {
+    "id": "R031",
+    "source": "P003",
+    "target": "LOC001",
+    "type": "LOCATED_AT",
+    "weight": 1.0,
+    "timestamp": "2026-03-10T22:15:00Z",
+    "provenance": {
+      "source_id": "SURV-2026-031",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Present during cargo unloading at Okhla godown.",
+      "confidence": 0.97
+    }
+  },
+  {
+    "id": "R032",
+    "source": "P002",
+    "target": "LOC002",
+    "type": "LOCATED_AT",
+    "weight": 1.0,
+    "timestamp": "2026-02-24T18:20:00Z",
+    "provenance": {
+      "source_id": "FIR-188/2026",
+      "source_type": "POLICE_REPORT",
+      "snippet": "Apprehended inside Chandni Chowk counter premises.",
+      "confidence": 0.99
+    }
+  },
+  {
+    "id": "R033",
+    "source": "P001",
+    "target": "LOC003",
+    "type": "LOCATED_AT",
+    "weight": 1.0,
+    "timestamp": "2026-03-04T00:00:00Z",
+    "provenance": {
+      "source_id": "INT-DEL-2026-409",
+      "source_type": "SURVEILLANCE",
+      "snippet": "Residence and command location.",
+      "confidence": 0.9
+    }
+  }
+]
