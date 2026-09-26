@@ -78,70 +78,33 @@ Modern criminal operations are increasingly networked, distributed, and multi-la
 
 ---
 
-## 4. Repository Structure
+## 4. Visual Workspace & Platform Showcase
 
-```
-VERITAS/
-├── ai/                     # Member 1: AI, NLP, Entity Resolution, Ingestion Pipeline
-│   ├── ingestion/          # CSV and document text parsers
-│   ├── extraction/         # spaCy NER and relationship extraction
-│   ├── resolution/         # Entity deduplication and fuzzy matching
-│   ├── anomaly/            # Telecom burst and financial anomaly detection
-│   └── pipeline.py         # End-to-end ingestion pipeline runner
-│
-├── backend/                # Member 2: Backend, Graph Intelligence & APIs
-│   ├── app/
-│   │   ├── api/            # FastAPI routes (/graph, /entities, /paths, /analytics, /health)
-│   │   ├── core/           # Settings, CORS, configurations, and exception handlers
-│   │   ├── database/       # Neo4j driver and Cypher query repositories
-│   │   ├── graph/          # NetworkX builder, centrality, communities, pathfinder
-│   │   ├── models/         # Pydantic entity, relationship, and response models
-│   │   ├── services/       # Graph, entity, and analytics business logic
-│   │   └── main.py         # Application entrypoint & CORS middleware
-│   ├── requirements.txt    # Python dependencies
-│   └── .env.example        # Environment variable template
-│
-├── frontend/               # Member 3: UI/UX & Visualization
-│   ├── src/
-│   │   ├── api/            # Axios API client modules (VITE_API_URL configured)
-│   │   ├── charts/         # Recharts centrality & community distributions
-│   │   ├── components/
-│   │   │   ├── common/     # Detective seals, PathFinderModal
-│   │   │   ├── evidence/   # Entity dossiers, verbatim relationship inspectors
-│   │   │   ├── filters/    # Class and risk popover filters
-│   │   │   └── layout/     # Persistent AppSidebar, AppHeader, and Institutional Footer
-│   │   ├── context/        # ThemeContext (Light/Night), ToastContext
-│   │   ├── graph/          # Cytoscape.js canvas, styles, and lifecycle helpers
-│   │   ├── pages/          # Home, Dashboard, NetworkAnalysis, EntityDetails, Analytics
-│   │   ├── App.jsx         # Root router shell
-│   │   └── main.jsx        # React root entrypoint
-│   ├── package.json        # Node dependencies (React 18, Vite 5, Cytoscape, Tailwind 3)
-│   ├── postcss.config.js   # PostCSS Tailwind utility compilation
-│   ├── tailwind.config.js  # Investigation theme tokens (Warm Canvas & Obsidian Night)
-│   └── vite.config.js      # Vite build & proxy settings
-│
-├── data/
-│   └── demo/               # Stable judging dataset (FIRs, CDRs, Transactions, Graph JSON)
-│
-├── docs/                   # Complete Technical Documentation
-│   ├── MEMBER1_BACKEND_HANDOFF.md # Member 1 AI Pipeline Hand-off
-│   ├── MEMBER2_BACKEND_GUIDE.md   # Member 2 Backend Architecture & Endpoints
-│   ├── MEMBER3_FRONTEND_GUIDE.md  # Member 3 UI/UX Design & Components
-│   ├── DEPLOYMENT_GUIDE.md        # Step-by-step Render.com deployment walkthrough
-│   ├── PRD.md                     # Product Requirements Document
-│   ├── ARCHITECTURE.md            # System Architecture
-│   └── DEMO_FLOW.md               # Presentation Walkthrough
-│
-├── tests/                  # 130 Automated Tests (100% Passing)
-│   ├── ai/                 # AI pipeline, extraction, resolution, anomaly tests (104 tests)
-│   ├── backend/            # FastAPI, graph, analytics, paths, health tests (25 tests)
-│   └── integration/        # Member handoff end-to-end integration test (1 test)
-│
-├── render.yaml             # Render cloud infrastructure blueprint (FastAPI + React Static)
-├── .gitignore
-├── LICENSE                 # MIT License
-└── README.md
-```
+### 🏛️ Bureau Landing Deck (`/`)
+The primary entrypoint for intelligence analysts, featuring live operation metrics, algorithmic architecture pillars, and specialized crime enforcement divisions.
+
+![Bureau Landing Deck](docs/images/veritas_home.png)
+
+---
+
+### 📊 Investigation Overview Dashboard (`/dashboard`)
+Operational control center featuring real-time KPI metrics, force-directed hero knowledge graph, and prioritized evidentiary review signals.
+
+![Overview Dashboard](docs/images/veritas_dashboard.png)
+
+---
+
+### 📈 Network Topology & Syndicate Analytics (`/analytics`)
+Deep structural graph metrics, horizontal centrality leaderboards (PageRank, Betweenness, Degree), and Louvain modularity sub-cell clustering.
+
+![Syndicate Analytics](docs/images/veritas_analytics.png)
+
+---
+
+### 👥 Engineering Squad Accreditation & Institutional Footer
+Persistent footer rendering across every dashboard view, highlighting judicial evidentiary compliance standards, legal disclaimers, and **TeamMETX** core engineers.
+
+![TeamMETX Footer](docs/images/veritas_footer_teammetx.png)
 
 ---
 
