@@ -1,0 +1,85 @@
+{
+  "scenario_id": "SCENARIO_MEMBER1_MEMBER2_HANDOFF",
+  "title": "Minimal Deterministic Investigation Scenario for Member 1 -> Member 2 Integration",
+  "description": "Deterministic multi-modal investigation fixture exercising NER, relationship extraction, cross-document entity resolution, endpoint rewriting, explainable anomaly detection, and JSON serialization.",
+  "documents": [
+    {
+      "source_id": "INT-2026-01",
+      "document_type": "POLICE_REPORT",
+      "file_path": "inline_document",
+      "file_name": "int_2026_01.txt",
+      "raw_text": "CONFIDENTIAL POLICE REPORT // INT-2026-01\nAccused identified as Arjun Verma S/o Ramesh Verma was intercepted driving truck DL-1M-4412.\nArjun Verma was found in possession of mobile line +919811010006.\nConsignment coordination was overseen by Rajesh Kumar at Okhla Industrial Area."
+    },
+    {
+      "source_id": "SURV-2026-02",
+      "document_type": "SURVEILLANCE",
+      "file_path": "inline_document",
+      "file_name": "surv_2026_02.txt",
+      "raw_text": "SURVEILLANCE REPORT // SURV-2026-02\nAccused identified as Arjun Verma S/o Ramesh Verma was stationed at Okhla Industrial Area.\nOperations overseen by Vikramaditya Singhania S/o Ramesh Singhania using primary line +919811010001.\nVikramaditya Singhania controls shell firm Astra Logistics Ltd holding corporate account ACC-ASTRA-7701."
+    }
+  ],
+  "cdrs": [
+    {
+      "call_id": "CDR-HND-001",
+      "caller_raw": "+919811010006",
+      "caller_normalized": "+919811010006",
+      "receiver_raw": "+919811010001",
+      "receiver_normalized": "+919811010001",
+      "timestamp_raw": "2026-03-01T12:00:00Z",
+      "duration_sec": 180,
+      "call_type": "VOICE",
+      "cell_tower_id": "TOWER_OKHLA_01",
+      "row_index": 1
+    },
+    {
+      "call_id": "CDR-HND-002",
+      "caller_raw": "+919811010001",
+      "caller_normalized": "+919811010001",
+      "receiver_raw": "+919811010006",
+      "receiver_normalized": "+919811010006",
+      "timestamp_raw": "2026-03-01T12:15:00Z",
+      "duration_sec": 95,
+      "call_type": "VOICE",
+      "cell_tower_id": "TOWER_VASANT_01",
+      "row_index": 2
+    }
+  ],
+  "transactions": [
+    {
+      "transaction_id": "TX-HND-001",
+      "sender_account_raw": "ACC-SINGH-9901",
+      "sender_account_normalized": "ACC-SINGH-9901",
+      "receiver_account_raw": "ACC-ASTRA-7701",
+      "receiver_account_normalized": "ACC-ASTRA-7701",
+      "amount": 50000.0,
+      "currency": "INR",
+      "timestamp_raw": "2026-03-01T10:00:00Z",
+      "payment_channel": "NEFT",
+      "row_index": 1
+    },
+    {
+      "transaction_id": "TX-HND-002",
+      "sender_account_raw": "ACC-SINGH-9901",
+      "sender_account_normalized": "ACC-SINGH-9901",
+      "receiver_account_raw": "ACC-ASTRA-7701",
+      "receiver_account_normalized": "ACC-ASTRA-7701",
+      "amount": 75000.0,
+      "currency": "INR",
+      "timestamp_raw": "2026-03-01T11:00:00Z",
+      "payment_channel": "NEFT",
+      "row_index": 2
+    },
+    {
+      "transaction_id": "TX-HND-003",
+      "sender_account_raw": "ACC-SINGH-9901",
+      "sender_account_normalized": "ACC-SINGH-9901",
+      "receiver_account_raw": "ACC-ASTRA-7701",
+      "receiver_account_normalized": "ACC-ASTRA-7701",
+      "amount": 8500000.0,
+      "currency": "INR",
+      "timestamp_raw": "2026-03-01T15:00:00Z",
+      "payment_channel": "RTGS",
+      "row_index": 3
+    }
+  ]
+}
