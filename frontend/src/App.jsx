@@ -11,7 +11,7 @@ import Dashboard from './pages/Dashboard'
 import NetworkAnalysis from './pages/NetworkAnalysis'
 import EntityDetails from './pages/EntityDetails'
 import Analytics from './pages/Analytics'
-import client from './api/client'
+import { getHealth } from './api/graphApi'
 
 export default function App() {
   const [stats, setStats] = useState({ nodes: 29, edges: 33 })
@@ -19,7 +19,7 @@ export default function App() {
 
   const fetchStats = () => {
     setIsRefreshing(true)
-    client.get('/health')
+    getHealth()
       .then(res => {
         setStats({
           nodes: res.data.total_nodes || 29,
