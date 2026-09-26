@@ -1,6 +1,6 @@
 # VERITAS — AI-Powered Criminal Network Analysis & Intelligence Platform
 
-> **KAYA Hackathon 2026** // Transforming fragmented law enforcement records into an explainable relationship graph to uncover hidden syndicates, financial trails, and criminal kingpins.
+> **KAYA Hackathon 2026** // Transforming fragmented law enforcement records into an explainable relationship graph to uncover hidden syndicates, financial trails, and criminal networks.
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg)](https://fastapi.tiangolo.com/)
@@ -9,6 +9,7 @@
 [![Neo4j](https://img.shields.io/badge/Neo4j-5.x-blue.svg)](https://neo4j.com/)
 [![NetworkX](https://img.shields.io/badge/NetworkX-3.2%2B-lightgrey.svg)](https://networkx.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4%2B-38B2AC.svg)](https://tailwindcss.com/)
+[![Tests: 130 Passed](https://img.shields.io/badge/Tests-130%20Passed%20(100%25)-brightgreen.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -23,7 +24,7 @@ Modern criminal operations are increasingly networked, distributed, and multi-la
 
 **The Core Challenge**: Investigators struggle to uncover hidden multi-hop connections because data is fragmented and manual spreadsheet analysis fails to reveal indirect links. A relationship that appears trivial in isolation becomes critical when combined across sources.
 
-**The VERITAS Solution**: An automated intelligence system that ingests heterogeneous structured and unstructured records, extracts and resolves entities, constructs a knowledge graph, runs structural network algorithms (Centrality, Louvain Community Detection, Dijkstra Pathfinding), and renders an interactive, explainable investigation dashboard.
+**The VERITAS Solution**: An automated intelligence system that ingests heterogeneous structured and unstructured records, extracts and resolves entities, constructs an explainable multigraph knowledge graph, runs structural network algorithms (Centrality, Louvain Community Detection, Dijkstra Pathfinding), and renders an interactive, professional investigation workspace.
 
 ---
 
@@ -32,11 +33,15 @@ Modern criminal operations are increasingly networked, distributed, and multi-la
 - 🔍 **Multi-Source Data Ingestion**: Concurrently parses unstructured police complaints (PDF/TXT) and structured CSV records (CDRs, bank ledgers).
 - 🧠 **NLP & Named Entity Recognition (NER)**: Extracts key investigative entities: `Person`, `Phone`, `Vehicle`, `Organization`, `Location`, and `BankAccount`.
 - 🔗 **Entity Resolution & Alias Disambiguation**: Uses fuzzy matching (Jaro-Winkler, Levenshtein, Metaphone) to unify multiple aliases and phone formats into singular suspect dossiers.
-- 🕸️ **Interactive Cytoscape.js Graph Visualization**: High-performance canvas featuring force-directed physics layouts (`fcose`), entity-type styling, and interactive neighborhood expansion.
-- 👑 **Structural Influencer Detection**: Computes **PageRank**, **Betweenness Centrality**, and **Degree Centrality** to pinpoint kingpins and cross-gang intermediaries.
-- 🧭 **Multi-Hop Path Finder**: Discovers indirect connection paths between any two suspects (e.g., *Street Courier $\to$ Logistics Handler $\to$ Burner Phone $\to$ Hawala Broker $\to$ Syndicate Kingpin*).
-- 🏷️ **100% Explainable Provenance**: Every graph edge preserves links to supporting evidence (source document ID, timestamps, confidence scores, and raw sentence snippets).
-- 🛡️ **Hybrid Fail-Safe Architecture**: Automatically runs in **In-Memory NetworkX Mode** if Neo4j is offline, guaranteeing 100% uptime during live presentations.
+- 🏛️ **Bureau Landing Deck (`/`)**: Institutional home portal showcasing active operations (`Operation Cerberus`), syndicate telemetry, algorithmic pillars, and specialized crime divisions.
+- 📊 **Overview Dashboard (`/dashboard`)**: Minimalist KPI metric cards, stabilized Cytoscape hero network preview, and prioritized evidentiary review signals.
+- 🕸️ **Interactive Cytoscape.js Network Explorer (`/network`)**: High-performance canvas featuring force-directed physics, node/edge tap listeners, 72%/28% canvas-to-inspector split, and multi-hop connection tracing.
+- 👑 **Structural Influencer Detection**: Computes **PageRank**, **Betweenness Centrality**, and **Degree Centrality** to pinpoint gatekeepers, brokers, and influential coordinators.
+- 🧭 **Multi-Hop Path Finder**: Discovers indirect connection paths between any two suspects (e.g., *Street Courier $\to$ Logistics Handler $\to$ Burner Phone $\to$ Hawala Broker $\to$ Syndicate Core*).
+- 🏷️ **100% Explainable Provenance**: Every graph edge preserves links to supporting evidence (source document ID, timestamps, confidence scores, and verbatim primary citations).
+- 🛡️ **Hybrid Fail-Safe Architecture**: Operates on a high-speed **In-Memory NetworkX Engine** out-of-the-box (with optional Neo4j Aura sync), guaranteeing zero downtime.
+- 🏅 **Detective Badges Suite**: Handcrafted SVG forensic insignias and institutional seals (`DetectiveBadge`, `CrimeIntelligenceSeal`, `FinancialCrimesBadge`, `EvidenceVaultSeal`).
+- 📜 **Institutional Footer on Every View**: Complete workspace navigation, judicial standards (`NIST SP 800-86`, `FED Rule 902(14)`, `FIPS 140-3`, `CJIS v5.9`), legal disclaimer, and **TeamMETX** accreditation.
 
 ---
 
@@ -67,7 +72,7 @@ Modern criminal operations are increasingly networked, distributed, and multi-la
                                        ▼
 +-------------------------------------------------------------------------------+
 |                    INVESTIGATOR VISUAL DASHBOARD (`frontend/`)                |
-|   Cytoscape.js Graph Canvas | Suspect Dossier Panel | Evidence Provenance UI  |
+|   Cytoscape Canvas | Suspect Dossier Panel | Evidence Provenance UI | Recharts|
 +-------------------------------------------------------------------------------+
 ```
 
@@ -84,10 +89,10 @@ VERITAS/
 │   ├── anomaly/            # Telecom burst and financial anomaly detection
 │   └── pipeline.py         # End-to-end ingestion pipeline runner
 │
-├── backend/                # Member 2: YOU (Backend, Graph Intelligence & APIs)
+├── backend/                # Member 2: Backend, Graph Intelligence & APIs
 │   ├── app/
-│   │   ├── api/            # FastAPI routes (/graph, /entities, /paths, /analytics)
-│   │   ├── core/           # Settings, configurations, and exception handlers
+│   │   ├── api/            # FastAPI routes (/graph, /entities, /paths, /analytics, /health)
+│   │   ├── core/           # Settings, CORS, configurations, and exception handlers
 │   │   ├── database/       # Neo4j driver and Cypher query repositories
 │   │   ├── graph/          # NetworkX builder, centrality, communities, pathfinder
 │   │   ├── models/         # Pydantic entity, relationship, and response models
@@ -98,39 +103,41 @@ VERITAS/
 │
 ├── frontend/               # Member 3: UI/UX & Visualization
 │   ├── src/
-│   │   ├── api/            # Axios API client modules
+│   │   ├── api/            # Axios API client modules (VITE_API_URL configured)
 │   │   ├── charts/         # Recharts centrality & community distributions
-│   │   ├── components/     # Evidence drawers, filter bars, suspect dossiers
-│   │   ├── graph/          # Cytoscape.js canvas, styles, and graph formatters
-│   │   ├── pages/          # Dashboard, NetworkAnalysis, EntityDetails, Analytics
-│   │   ├── App.jsx         # App shell and navigation
+│   │   ├── components/
+│   │   │   ├── common/     # Detective seals, PathFinderModal
+│   │   │   ├── evidence/   # Entity dossiers, verbatim relationship inspectors
+│   │   │   ├── filters/    # Class and risk popover filters
+│   │   │   └── layout/     # Persistent AppSidebar, AppHeader, and Institutional Footer
+│   │   ├── context/        # ThemeContext (Light/Night), ToastContext
+│   │   ├── graph/          # Cytoscape.js canvas, styles, and lifecycle helpers
+│   │   ├── pages/          # Home, Dashboard, NetworkAnalysis, EntityDetails, Analytics
+│   │   ├── App.jsx         # Root router shell
 │   │   └── main.jsx        # React root entrypoint
-│   ├── package.json        # Node dependencies (React 18, Vite, Cytoscape, Tailwind)
-│   └── vite.config.js      # Vite build and proxy settings
+│   ├── package.json        # Node dependencies (React 18, Vite 5, Cytoscape, Tailwind 3)
+│   ├── postcss.config.js   # PostCSS Tailwind utility compilation
+│   ├── tailwind.config.js  # Investigation theme tokens (Warm Canvas & Obsidian Night)
+│   └── vite.config.js      # Vite build & proxy settings
 │
 ├── data/
 │   └── demo/               # Stable judging dataset (FIRs, CDRs, Transactions, Graph JSON)
 │
 ├── docs/                   # Complete Technical Documentation
-│   ├── OVERVIEW_VERITAS.md # Master team onboarding & quickstart overview
-│   ├── PRD.md              # Product Requirements Document
-│   ├── ARCHITECTURE.md     # Architecture specifications
-│   ├── Blueprint.md        # Technical component blueprint
-│   ├── Devlopment.md       # Developer setup and contribution guide
-│   ├── Testing.md          # Comprehensive testing strategy
-│   ├── Deployment.md       # Render cloud deployment guide
-│   ├── VERITAS_PLAN.md     # 36-hour hackathon execution plan
-│   ├── API_CONTRACT.md     # REST endpoint contract
-│   ├── DATA_SCHEMA.md      # Raw and processed data specifications
-│   ├── GRAPH_SCHEMA.md     # Neo4j node and relationship schema
-│   └── DEMO_FLOW.md        # Hackathon presentation walkthrough script
+│   ├── MEMBER1_BACKEND_HANDOFF.md # Member 1 AI Pipeline Hand-off
+│   ├── MEMBER2_BACKEND_GUIDE.md   # Member 2 Backend Architecture & Endpoints
+│   ├── MEMBER3_FRONTEND_GUIDE.md  # Member 3 UI/UX Design & Components
+│   ├── DEPLOYMENT_GUIDE.md        # Step-by-step Render.com deployment walkthrough
+│   ├── PRD.md                     # Product Requirements Document
+│   ├── ARCHITECTURE.md            # System Architecture
+│   └── DEMO_FLOW.md               # Presentation Walkthrough
 │
-├── scripts/                # Utility & Loader Scripts
-│   ├── seed_demo.py        # Generates synthetic judging dataset
-│   ├── load_neo4j.py       # Loads demo dataset into Neo4j
-│   └── test_pipeline.py    # Pipeline sanity & integrity audit
+├── tests/                  # 130 Automated Tests (100% Passing)
+│   ├── ai/                 # AI pipeline, extraction, resolution, anomaly tests (104 tests)
+│   ├── backend/            # FastAPI, graph, analytics, paths, health tests (25 tests)
+│   └── integration/        # Member handoff end-to-end integration test (1 test)
 │
-├── render.yaml             # Render cloud deployment blueprint
+├── render.yaml             # Render cloud infrastructure blueprint (FastAPI + React Static)
 ├── .gitignore
 ├── LICENSE                 # MIT License
 └── README.md
@@ -145,32 +152,23 @@ VERITAS/
 - Node.js 18+ and npm
 - Git
 
-### 5.2 Step 1: Clone & Seed Demo Data
-```bash
-# 1. Generate the demo judging dataset (FIRs, CDRs, Transactions, Graph JSON)
-python scripts/seed_demo.py
-
-# 2. Run the integrity audit to verify 6/6 tests pass
-python scripts/test_pipeline.py
-```
-
-### 5.3 Step 2: Start the Backend (FastAPI)
+### 5.2 Step 1: Start the Backend (FastAPI)
 ```bash
 # Create and activate virtual environment
 python -m venv .venv
-# On Windows: .venv\Scripts\Activate.ps1
+# On Windows: .venv\Scripts\activate
 # On Linux/macOS: source .venv/bin/activate
 
 # Install dependencies
 pip install -r backend/requirements.txt
 
 # Start FastAPI server
-uvicorn backend.app.main:app --reload --port 8000
+python -m uvicorn backend.app.main:app --reload --port 8000
 ```
-- API Docs (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
-- Health Check: [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
+- API Documentation (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
+- System Health Check: [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
 
-### 5.4 Step 3: Start the Frontend (React + Vite)
+### 5.3 Step 2: Start the Frontend (React + Vite)
 ```bash
 cd frontend
 npm install
@@ -178,13 +176,32 @@ npm run dev
 ```
 - Web Application: [http://localhost:5173](http://localhost:5173)
 
+### 5.4 Step 3: Run the Automated Test Suite
+```bash
+# Run all 130 tests across AI, Backend, and Integration tiers
+python -m pytest tests/
+```
+
 ---
 
-## 6. Demo Showcase: "Operation Shadow Syndicate"
+## 6. Cloud Deployment (Render.com)
 
-The included demo dataset models a realistic organized crime network in Delhi NCR:
-1. **The Interception**: Police seize 14 kg of contraband from driver **Arjun Verma (P006)** at Singhu Border.
-2. **The CDR Clues**: Verma's phone connects to logistics coordinator **Rajesh Kumar (P003)** and an elusive burner phone operated by **Kabir Mirza (P004)**.
+The project includes a production-ready infrastructure blueprint in [`render.yaml`](render.yaml):
+
+1. Go to [dashboard.render.com](https://dashboard.render.com/) and click **New +** ➔ **Blueprint**.
+2. Connect repository **`amanpal3/VERITAS-`** and branch **`main`**.
+3. Render automatically provisions:
+   - **`veritas-backend`** (Python Web Service running FastAPI on Uvicorn).
+   - **`veritas-frontend`** (Static Site with SPA rewrite rules).
+4. See [`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md) for full instructions.
+
+---
+
+## 7. Demo Showcase: "Operation Shadow Syndicate"
+
+The included demo dataset models a realistic organized crime network:
+1. **The Interception**: Police seize contraband from driver **Arjun Verma (P006)** at Singhu Border.
+2. **The CDR Clues**: Verma's phone connects to logistics coordinator **Rajesh Kumar (P003)** and a burner phone operated by **Kabir Mirza (P004)**.
 3. **The Hawala Trail**: Financial records link front company **Astra Logistics Ltd (ORG001)** to Hawala broker **Tariq Sheikh (P002)**.
 4. **The Discovery**: Running **VERITAS Pathfinding** and **Betweenness Centrality** traces the entire multi-hop chain directly to the syndicate mastermind: **Vikramaditya Singhania (P001)**.
 
@@ -192,26 +209,13 @@ $$\text{Arjun Verma [Runner]} \longrightarrow \text{Rajesh [Logistics]} \longrig
 
 ---
 
-## 7. API Reference Summary
+## 8. Engineering Team — TeamMETX
 
-| Method | Endpoint | Description |
-| :--- | :--- | :--- |
-| `GET` | `/api/v1/health` | System liveness and graph backend status |
-| `GET` | `/api/v1/graph` | Returns Cytoscape nodes and edges with threshold/type filters |
-| `GET` | `/api/v1/graph/ego/{id}` | Returns $N$-hop neighborhood subgraph centered around an entity |
-| `GET` | `/api/v1/entities` | Paginated entity search with filters by type and risk score |
-| `GET` | `/api/v1/entities/{id}` | Detailed suspect dossier, linked aliases, and direct edges |
-| `GET` | `/api/v1/paths/shortest` | Multi-hop shortest path between source and target entities |
-| `GET` | `/api/v1/communities` | Detected criminal clusters using Louvain modularity |
-| `GET` | `/api/v1/analytics/centrality` | Influencer leaderboards by PageRank, Betweenness, and Degree |
-
----
-
-## 8. Team Division & Roles
-
-- **Member 1 (AI / NLP / Data)**: Multi-source ingestion parsers, spaCy entity extraction, relationship extraction, entity resolution, and telecom burst anomaly detection.
-- **Member 2 (Backend / Graph Intelligence — YOU)**: Graph builder, NetworkX/Neo4j engine, centrality algorithms, pathfinder, FastAPI REST endpoints, and Sentry monitoring.
-- **Member 3 (UI / UX Visualization)**: React 18, TailwindCSS dark-mode interface, Cytoscape.js interactive network graph canvas, and evidentiary provenance modals.
+| # | Name | Core Responsibilities |
+| :-: | :--- | :--- |
+| **1** | **Aman Pal** | **AI Pipeline & NLP Architecture** — Data ingestion parsers, spaCy Named Entity Recognition, relationship extraction, fuzzy entity resolution, and telecom burst anomaly detection. |
+| **2** | **Armaan Dwivedi** | **Backend & Graph Intelligence** — FastAPI REST engine, NetworkX multigraph, Louvain modularity clustering, PageRank/Betweenness ranking, Dijkstra shortest-path discovery, and Sentry monitoring. |
+| **3** | **Om Upadhyay** | **UI/UX & Forensic Frontend** — React 18, Cytoscape.js interactive graph workspace, Recharts analytics, Light/Night themes, evidence dossiers, and detective insignia suite. |
 
 ---
 
