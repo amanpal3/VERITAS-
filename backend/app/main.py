@@ -65,10 +65,15 @@ app = FastAPI(
 app.add_exception_handler(VeritasAPIException, veritas_exception_handler)
 app.add_exception_handler(Exception, unhandled_exception_handler)
 
-# CORS Middleware
+# CORS Middleware - Development localhost & Production Render domain support
+cors_origins = list(settings.CORS_ORIGINS)
+if settings.FRONTEND_URL and settings.FRONTEND_URL not in cors_origins:
+    cors_origins.append(settings.FRONTEND_URL.rstrip("/"))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=cors_origins,
+    allow_origin_regex=r"https://.*\.onrender\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

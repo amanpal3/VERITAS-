@@ -30,6 +30,7 @@ class Settings(BaseSettings):
         "http://127.0.0.1:3000",
         "*",
     ]
+    FRONTEND_URL: Optional[str] = None
 
     # Neo4j Database
     NEO4J_URI: str = "bolt://localhost:7687"
