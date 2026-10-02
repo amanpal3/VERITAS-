@@ -79,12 +79,6 @@ Modern criminal operations are increasingly networked, distributed, and multi-la
 ---
 
 ## 4. Visual Workspace & Platform Showcase
-
-### 🏛️ Bureau Landing Deck (`/`)
-The primary entrypoint for intelligence analysts, featuring live operation metrics, algorithmic architecture pillars, and specialized crime enforcement divisions.
-
-![Bureau Landing Deck](docs/images/veritas_home.png)
-
 ---
 
 ### 📊 Investigation Overview Dashboard (`/dashboard`)
