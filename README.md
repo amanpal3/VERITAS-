@@ -108,55 +108,24 @@ Persistent footer rendering across every dashboard view, highlighting judicial e
 
 ---
 
-## 5. Quickstart & Local Setup
+## 🚀 Live Deployment
 
-### 5.1 Prerequisites
-- Python 3.10+
-- Node.js 18+ and npm
-- Git
+VERITAS is deployed on Render and is available for live demonstration.
 
-### 5.2 Step 1: Start the Backend (FastAPI)
-```bash
-# Create and activate virtual environment
-python -m venv .venv
-# On Windows: .venv\Scripts\activate
-# On Linux/macOS: source .venv/bin/activate
+| Service | Status | Deployment |
+|---|---|---|
+| 🌐 Frontend Application | 🟢 Live | [Open VERITAS](https://veritas-frontend-elyj.onrender.com) |
+| ⚙️ Backend API | 🟢 Live | [Open API](https://veritas-backend-dogj.onrender.com) |
 
-# Install dependencies
-pip install -r backend/requirements.txt
+### Live Application
 
-# Start FastAPI server
-python -m uvicorn backend.app.main:app --reload --port 8000
-```
-- API Documentation (Swagger): [http://localhost:8000/docs](http://localhost:8000/docs)
-- System Health Check: [http://localhost:8000/api/v1/health](http://localhost:8000/api/v1/health)
+👉 **[Launch VERITAS](https://veritas-frontend-elyj.onrender.com)**
 
-### 5.3 Step 2: Start the Frontend (React + Vite)
-```bash
-cd frontend
-npm install
-npm run dev
-```
-- Web Application: [http://localhost:5173](http://localhost:5173)
+The production deployment consists of a **React + Vite frontend** and a **FastAPI backend**, deployed through Render. The backend integrates the graph intelligence and analysis services used by the VERITAS investigation dashboard.
 
-### 5.4 Step 3: Run the Automated Test Suite
-```bash
-# Run all 130 tests across AI, Backend, and Integration tiers
-python -m pytest tests/
-```
+> **Note:** The backend is hosted on Render's free tier and may spin down after a period of inactivity. The first request after inactivity may therefore take a short time to respond.
 
 ---
-
-## 6. Cloud Deployment (Render.com)
-
-The project includes a production-ready infrastructure blueprint in [`render.yaml`](render.yaml):
-
-1. Go to [dashboard.render.com](https://dashboard.render.com/) and click **New +** ➔ **Blueprint**.
-2. Connect repository **`amanpal3/VERITAS-`** and branch **`main`**.
-3. Render automatically provisions:
-   - **`veritas-backend`** (Python Web Service running FastAPI on Uvicorn).
-   - **`veritas-frontend`** (Static Site with SPA rewrite rules).
-4. See [`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md) for full instructions.
 
 ---
 
@@ -176,9 +145,9 @@ $$\text{Arjun Verma [Runner]} \longrightarrow \text{Rajesh [Logistics]} \longrig
 
 | # | Name | Core Responsibilities |
 | :-: | :--- | :--- |
-| **1** | **Aman Pal** | **AI Pipeline & NLP Architecture** — Data ingestion parsers, spaCy Named Entity Recognition, relationship extraction, fuzzy entity resolution, and telecom burst anomaly detection. |
-| **2** | **Armaan Dwivedi** | **Backend & Graph Intelligence** — FastAPI REST engine, NetworkX multigraph, Louvain modularity clustering, PageRank/Betweenness ranking, Dijkstra shortest-path discovery, and Sentry monitoring. |
-| **3** | **Om Upadhyay** | **UI/UX & Forensic Frontend** — React 18, Cytoscape.js interactive graph workspace, Recharts analytics, Light/Night themes, evidence dossiers, and detective insignia suite. |
+| **1** | **Om Upadhyay** | **AI Pipeline & NLP Architecture** — Data ingestion parsers, spaCy Named Entity Recognition, relationship extraction, fuzzy entity resolution, and telecom burst anomaly detection. |
+| **2** | **Aman Pal** | **Backend & Graph Intelligence** — FastAPI REST engine, NetworkX multigraph, Louvain modularity clustering, PageRank/Betweenness ranking, Dijkstra shortest-path discovery, and Sentry monitoring. |
+| **3** | **Armaan Dwivedi** | **UI/UX & Forensic Frontend** — React 18, Cytoscape.js interactive graph workspace, Recharts analytics, Light/Night themes, evidence dossiers, and detective insignia suite. |
 
 ---
 
